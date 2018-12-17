@@ -1,7 +1,7 @@
 import { Pricing } from './pricing.models';
 
 export const HairPricing: Pricing = {
-    name: 'Hair Service',
+    name: '',
     // tslint:disable-next-line:max-line-length
     desc: 'Please feel confident in trying any one of our team members to achieve your desired style. Whether you choose cut, color, or styling our team is consistently trained and educated to keep up with the latest fashions and trends for your best individual style. Junior Stylist pricing also available.',
     subtext: 'Services and prices vary depending on the stylist. Services available by appointment.',

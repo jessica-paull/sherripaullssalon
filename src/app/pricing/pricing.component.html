@@ -1,10 +1,11 @@
 <div class="row" *ngIf="servicePricing">
     <div class="col-lg-12">
-        <hr>
-        <h2 class="text-center" *ngIf="servicePricing.name">
-            {{servicePricing.name}}
-        </h2>
-        <hr>
+        <div *ngIf="servicePricing.name">
+            <h2 class="text-center">
+                {{servicePricing.name}}
+            </h2>
+            <hr>
+        </div>
         <p *ngIf="servicePricing.desc">
             {{servicePricing.desc}}
         </p>
