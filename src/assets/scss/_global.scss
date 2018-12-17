@@ -41,7 +41,7 @@ h6 {
 }
 
 .bg-primary {
-  background-color: $primary !important;
+  background-color: lighten($primary, 50%) !important;
 }
 
 .bg-dark {
