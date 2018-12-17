@@ -7,12 +7,37 @@
             </h2>
             <hr>
             <p>We invite you to relax and rejuvenate at our spa. Experience balance and restore your mind, body, spirit, and reestablish a sense of health and well-being.</p>
-            <ul class="list-inline text-center">
-            	<li><a href="#spa/hair">Hair Removal</a></li>
-            	<li><a href="#spa/nail">Nail Service</a></li>
-            	<li><a href="#spa/skincare">Skincare</a></li>
-            	<li><a href="#spa/massage">Massage</a></li>
-            </ul>
+            
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-hair-tab" data-toggle="tab" href="#nav-hair" role="tab" aria-controls="nav-hair" aria-selected="true">
+                        Hair Removal
+                    </a>
+                    <a class="nav-item nav-link" id="nav-nail-tab" data-toggle="tab" href="#nav-nail" role="tab" aria-controls="nav-nail" aria-selected="false">
+                        Nail Service
+                    </a>
+                    <a class="nav-item nav-link" id="nav-skincare-tab" data-toggle="tab" href="#nav-skincare" role="tab" aria-controls="nav-skincare" aria-selected="false">
+                        Skincare
+                    </a>
+                    <a class="nav-item nav-link" id="nav-massage-tab" data-toggle="tab" href="#nav-massage" role="tab" aria-controls="nav-massage" aria-selected="false">
+                        Massage
+                    </a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-hair" role="tabpanel" aria-labelledby="nav-hair-tab">
+                    <app-pricing [servicePricing]="hairPricing"></app-pricing>
+                </div>
+                <div class="tab-pane fade" id="nav-nail" role="tabpanel" aria-labelledby="nav-nail-tab">
+                    <app-pricing [servicePricing]="nailPricing"></app-pricing>
+                </div>
+                <div class="tab-pane fade" id="nav-skincare" role="tabpanel" aria-labelledby="nav-skincare-tab">
+                    <app-pricing [servicePricing]="skinPricing"></app-pricing>
+                </div>
+                <div class="tab-pane fade" id="nav-massage" role="tabpanel" aria-labelledby="nav-massage-tab">
+                    <app-pricing [servicePricing]="massagePricing"></app-pricing>
+                </div>
+            </div>
         </div>
     </div>
 </div>

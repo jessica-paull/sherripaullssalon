@@ -30,7 +30,7 @@ export class PricingService {
     return of(SpaSkinPricing);
   }
 
-  getSpaMAssagePricing(): Observable<Pricing> {
+  getSpaMassagePricing(): Observable<Pricing> {
     return of(SpaMassagePricing);
   }
 

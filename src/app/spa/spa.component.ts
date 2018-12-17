@@ -10,9 +10,29 @@ import { PricingService } from '../pricing.service';
 })
 export class SpaComponent implements OnInit {
 
-  constructor() { }
+  hairPricing: Pricing;
+  nailPricing: Pricing;
+  skinPricing: Pricing;
+  massagePricing: Pricing;
+
+  constructor(private pricingService: PricingService) { }
 
   ngOnInit() {
+    this.getPricing();
+  }
+
+  getPricing(): void {
+    this.pricingService.getSpaHairPricing()
+      .subscribe(pricing => this.hairPricing = pricing);
+
+    this.pricingService.getSpaNailPricing()
+      .subscribe(pricing => this.nailPricing = pricing);
+
+    this.pricingService.getSpaSkinPricing()
+      .subscribe(pricing => this.skinPricing = pricing);
+
+    this.pricingService.getSpaMassagePricing()
+      .subscribe(pricing => this.massagePricing = pricing);
   }
 
 }

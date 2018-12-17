@@ -1,7 +1,7 @@
 import { Pricing } from './pricing.models';
 
 export const SpaMassagePricing: Pricing = {
-    'name': 'Massage',
+    'name': '',
     'desc': '',
     'subtext': 'Other desired services may be available.',
     'items': [

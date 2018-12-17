@@ -1,7 +1,7 @@
 import { Pricing } from './pricing.models';
 
 export const SpaNailPricing: Pricing = {
-    'name': 'Nail Services',
+    'name': '',
     'desc': '',
     'subtext': '',
     'items': [
