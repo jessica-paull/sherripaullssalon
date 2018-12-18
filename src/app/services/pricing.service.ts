@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { Pricing } from './pricing.models';
-import { HairPricing } from './data-pricing-hair';
-import { SpaHairPricing } from './data-pricing-spa-hair';
-import { SpaNailPricing } from './data-pricing-spa-nail';
-import { SpaSkinPricing } from './data-pricing-spa-skin';
-import { SpaMassagePricing } from './data-pricing-spa-massage';
+import { Pricing } from '../data/models.pricing';
+import { HairPricing } from '../data/data-pricing-hair';
+import { SpaHairPricing } from '../data/data-pricing-spa-hair';
+import { SpaNailPricing } from '../data/data-pricing-spa-nail';
+import { SpaSkinPricing } from '../data/data-pricing-spa-skin';
+import { SpaMassagePricing } from '../data/data-pricing-spa-massage';
 
 @Injectable()
 export class PricingService {

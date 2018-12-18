@@ -1,4 +1,4 @@
-import { Employee } from './employee.models';
+import { Employee } from './models.employee';
 
 export const Employees: Employee[] = [
     {

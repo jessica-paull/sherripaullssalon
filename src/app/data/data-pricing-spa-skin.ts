@@ -1,4 +1,4 @@
-import { Pricing } from './pricing.models';
+import { Pricing } from './models.pricing';
 
 export const SpaSkinPricing: Pricing[] = [
     {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Pricing } from '../pricing.models';
-import { PricingService } from '../pricing.service';
+import { Pricing } from '../data/models.pricing';
+import { PricingService } from '../services/pricing.service';
 
 @Component({
   selector: 'app-salon',

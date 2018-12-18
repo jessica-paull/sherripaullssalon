@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { PricingService } from './pricing.service';
+import { PricingService } from './services/pricing.service';
+import { EmployeeService } from './services/employee.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -30,7 +31,7 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ PricingService ],
+  providers: [ PricingService, EmployeeService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
