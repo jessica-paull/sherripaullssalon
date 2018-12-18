@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Pricing } from '../pricing.models';
-import { ServiceItem } from '../pricing.models';
 import { Rate } from '../pricing.models';
 
 @Component({

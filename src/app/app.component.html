@@ -36,12 +36,37 @@
 </nav>
 
 <!-- Content -->
-<router-outlet></router-outlet>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
 
 <!-- Footer: social media, address, phone number, hours-->
-<section class="bg-dark text-white">
-    <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+<footer class="bg-dark page-footer">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          518-399-3556 <br />
+          105 Mohawk Ave <br />
+          Scotia, NY 12302
+          <div>
+            <a class="secondary-link" href="#">Subscribe to our newsletter</a>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          Tu - Fri 10:00 AM - 6:00 PM <br />
+          Sat - Su 12 PM - 6:00 PM
+          <div class="small">Follow us</div>
+          <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+          </ul>
+        </div>
     </div>
-</section>
+  </div>
+</footer>

@@ -14,23 +14,23 @@ export class PricingService {
 
   constructor() { }
 
-  getHairPricing(): Observable<Pricing> {
+  getHairPricing(): Observable<Pricing[]> {
     return of(HairPricing);
   }
 
-  getSpaHairPricing(): Observable<Pricing> {
+  getSpaHairPricing(): Observable<Pricing[]> {
     return of(SpaHairPricing);
   }
 
-  getSpaNailPricing(): Observable<Pricing> {
+  getSpaNailPricing(): Observable<Pricing[]> {
     return of(SpaNailPricing);
   }
 
-  getSpaSkinPricing(): Observable<Pricing> {
+  getSpaSkinPricing(): Observable<Pricing[]> {
     return of(SpaSkinPricing);
   }
 
-  getSpaMassagePricing(): Observable<Pricing> {
+  getSpaMassagePricing(): Observable<Pricing[]> {
     return of(SpaMassagePricing);
   }
 

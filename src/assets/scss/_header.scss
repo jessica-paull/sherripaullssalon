@@ -1,0 +1,56 @@
+// Styling for the main header
+header.page-header {
+  color: white;
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-position: center center;
+  @include background-cover;
+  .page-header-text-bg {
+    background: rgba(0,0,0,.5);
+    padding: 40px 0;
+  }
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-weight: 300;
+  }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.15rem;
+    }
+  }
+  @media (min-width: 992px) {
+    height: 100vh;
+    min-height: 650px;
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+//Styling for the individual page headers
+#home-header {
+  background-image: url('../../assets/img/shop.jpg');
+  .page-header-text-bg {
+    background: transparent;
+  }
+}
+#hair-header {
+  background-image: url('../../assets/img/hair.jpg');
+}
+#spa-header {
+  background-image: url('../../assets/img/spa2.jpg');
+}

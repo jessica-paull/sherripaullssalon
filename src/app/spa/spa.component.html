@@ -1,44 +1,59 @@
-<section id="hairServicve">
+<app-page-header [id]="headerId" [title]="headerTitle" [subtext]="headerSubtext"></app-page-header>
+
+<section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Spa Services</h2>
-                <hr class="my-4">
+            <div class="col-6 offset-3">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-hair-tab" data-toggle="tab" href="#nav-hair" role="tab" aria-controls="nav-hair" aria-selected="true">
+                            Hair Removal
+                        </a>
+                        <a class="nav-item nav-link" id="nav-nail-tab" data-toggle="tab" href="#nav-nail" role="tab" aria-controls="nav-nail" aria-selected="false">
+                            Nail Service
+                        </a>
+                        <a class="nav-item nav-link" id="nav-skincare-tab" data-toggle="tab" href="#nav-skincare" role="tab" aria-controls="nav-skincare" aria-selected="false">
+                            Skincare
+                        </a>
+                        <a class="nav-item nav-link" id="nav-massage-tab" data-toggle="tab" href="#nav-massage" role="tab" aria-controls="nav-massage" aria-selected="false">
+                            Massage
+                        </a>
+                    </div>
+                </nav>
+                
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane pt-3 fade show active" id="nav-hair" role="tabpanel" aria-labelledby="nav-hair-tab">
+                        <p>
+                            Our trained and experienced waxing technician will consider your body's hair growth type and 
+                            skin type to best determine the waxing process for you. It is recommended that you are without 
+                            sun exposure prior to your waxing. Our technician will carefully prepare the skin leaving it 
+                            conditioned and soft. Over time hair growth may diminish. Application is done in a private setting.
+                        </p>
+                        <app-pricing [servicePricing]="hairPricing"></app-pricing>
+                    </div>
+                    <div class="tab-pane pt-3 fade" id="nav-nail" role="tabpanel" aria-labelledby="nav-nail-tab">
+                        <app-pricing [servicePricing]="nailPricing"></app-pricing>
+                    </div>
+                    <div class="tab-pane pt-3 fade" id="nav-skincare" role="tabpanel" aria-labelledby="nav-skincare-tab">
+                        <p>Each facial treatment includes an individualized analysis and the following skincare ritual:</p>
+                        <ul> 
+                            <li>Cleanse &amp; Toning</li> 
+                            <li>Exfoliation</li> 
+                            <li>Warm Vaporizing Mist</li> 
+                            <li>Extractions</li> 
+                            <li>Relaxing Face, Neck and Shoulder Massage</li> 
+                            <li>Specialized Mask</li> 
+                            <li>Moisturizing Heated Hand Treatment</li> 
+                        </ul>
+                        <p>All skincare treatments reccomended in a series of 3 for the best results.</p>
+                        <app-pricing [servicePricing]="skinPricing"></app-pricing>
+                    </div>
+                    <div class="tab-pane pt-3 fade" id="nav-massage" role="tabpanel" aria-labelledby="nav-massage-tab">
+                        <app-pricing [servicePricing]="massagePricing"></app-pricing>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <p>We invite you to relax and rejuvenate at our spa. Experience balance and restore your mind, body, spirit, and reestablish a sense of health and well-being.</p>
         
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-hair-tab" data-toggle="tab" href="#nav-hair" role="tab" aria-controls="nav-hair" aria-selected="true">
-                    Hair Removal
-                </a>
-                <a class="nav-item nav-link" id="nav-nail-tab" data-toggle="tab" href="#nav-nail" role="tab" aria-controls="nav-nail" aria-selected="false">
-                    Nail Service
-                </a>
-                <a class="nav-item nav-link" id="nav-skincare-tab" data-toggle="tab" href="#nav-skincare" role="tab" aria-controls="nav-skincare" aria-selected="false">
-                    Skincare
-                </a>
-                <a class="nav-item nav-link" id="nav-massage-tab" data-toggle="tab" href="#nav-massage" role="tab" aria-controls="nav-massage" aria-selected="false">
-                    Massage
-                </a>
-            </div>
-        </nav>
-        
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane pt-3 fade show active" id="nav-hair" role="tabpanel" aria-labelledby="nav-hair-tab">
-                <app-pricing [servicePricing]="hairPricing"></app-pricing>
-            </div>
-            <div class="tab-pane pt-3 fade" id="nav-nail" role="tabpanel" aria-labelledby="nav-nail-tab">
-                <app-pricing [servicePricing]="nailPricing"></app-pricing>
-            </div>
-            <div class="tab-pane pt-3 fade" id="nav-skincare" role="tabpanel" aria-labelledby="nav-skincare-tab">
-                <app-pricing [servicePricing]="skinPricing"></app-pricing>
-            </div>
-            <div class="tab-pane pt-3 fade" id="nav-massage" role="tabpanel" aria-labelledby="nav-massage-tab">
-                <app-pricing [servicePricing]="massagePricing"></app-pricing>
-            </div>
-        </div>
     </div>
 </section>

@@ -1,11 +1,12 @@
-<section id="hairServicve">
+<app-page-header [id]="headerId" [title]="headerTitle" [subtext]="headerSubtext"></app-page-header>
+
+<section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Hair Service</h2>
-                <hr class="my-4">
+            <div class="col-6 offset-3">
+                <app-pricing [servicePricing]="pricing"></app-pricing>
+                <em>Services and prices vary depending on the stylist. Services available by appointment.</em>
             </div>
         </div>
-        <app-pricing [servicePricing]="hairPricing"></app-pricing>
     </div>
 </section>

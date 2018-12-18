@@ -10,15 +10,22 @@ import { PricingService } from '../pricing.service';
 })
 export class SpaComponent implements OnInit {
 
-  hairPricing: Pricing;
-  nailPricing: Pricing;
-  skinPricing: Pricing;
-  massagePricing: Pricing;
+  headerId: String;
+  headerTitle: String;
+  headerSubtext: String;
+  hairPricing: Pricing[];
+  nailPricing: Pricing[];
+  skinPricing: Pricing[];
+  massagePricing: Pricing[];
 
   constructor(private pricingService: PricingService) { }
 
   ngOnInit() {
     this.getPricing();
+    this.headerId = 'spa-header';
+    this.headerTitle = 'Spa Services';
+    // tslint:disable-next-line:max-line-length
+    this.headerSubtext = 'We invite you to relax and rejuvenate at our spa. Experience balance and restore your mind, body, spirit, and reestablish a sense of health and well-being.';
   }
 
   getPricing(): void {

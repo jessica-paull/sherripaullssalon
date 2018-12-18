@@ -1,0 +1,22 @@
+.page-footer {
+    color: #fefefe;
+    font-size: .85em;
+    padding: 20px 0;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+    li {
+        i {
+            color: white;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            &:hover,
+            &:focus,
+            &:active {
+                color: $secondary;
+            }
+        }
+    }
+}

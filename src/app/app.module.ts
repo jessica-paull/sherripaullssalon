@@ -12,6 +12,7 @@ import { StaffComponent } from './staff/staff.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShopComponent } from './shop/shop.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PricingComponent } from './pricing/pricing.component';
     StaffComponent,
     ContactComponent,
     ShopComponent,
-    PricingComponent
+    PricingComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,4 @@
-<header class="masthead text-center text-white d-flex">
-    <div class="container my-auto">
-        <div class="row">
-        <div class="col-lg-10 mx-auto">
-            <h1 class="pouty-font">
-                <span>An art of rejuvenation</span>
-            </h1>
-            <hr>
-        </div>
-        <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">
-                <!-- some sort of tagline-->
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-        </div>
-        </div>
-    </div>
-</header>
+<app-page-header [id]="headerId" [title]="headerTitle" [subtext]="headerSubtext"></app-page-header>
 
 <section>
     <div class="container">
@@ -28,13 +10,13 @@
                 <div class="p-5">
                     <h2>Treat yourself</h2>
                     <p>
-                        <!-- brief introuction, about the shop -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing sed do eiusmod tempor
-                        incidid ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullam laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit.
+                        Once at Sherri Paull's Salon, you will experience an inviting atmosphere and receive 
+                        the highest quality of professionalism and contemporary service from our team of 
+                        experienced stylists, colorists, nail technicians, estheticians and licensed massage therapists.
                     </p>
-                    <a href="#">Call 518-399-3556 book an appointment today</a>
+                    <p>
+                        Call <a href="#">518-399-3556</a> to book your appointment today!
+                    </p>
                 </div>
             </div>
         </div>
@@ -55,7 +37,9 @@
                         <p class="card-text">
                             Lorem ipsum dolor sit amet ectetur adipelitl sed do eiusmod tempor incidid
                         </p>
-                        <a href="#">More Info</a>
+                        <a routerLink="/salon" routerActiveLink="active">
+                            More Info
+                        </a>
                     </div>
                 </div>
             </div>
@@ -68,7 +52,9 @@
                         <p class="card-text">
                             Lorem ipsum dolor sit amet ectetur adipelitl sed do eiusmod tempor incidid
                         </p>
-                        <a href="#">More Info</a>
+                        <a routerLink="/spa" routerActiveLink="active">
+                            More Info
+                        </a>
                     </div>
                 </div>
             </div>
@@ -81,7 +67,9 @@
                         <p class="card-text">
                             Lorem ipsum dolor sit amet ectetur adipelitl sed do eiusmod tempor incidid
                         </p>
-                        <a href="#">More Info</a>
+                        <a routerLink="/spa" routerActiveLink="active">
+                            More Info
+                        </a>
                     </div>
                 </div>
             </div>
@@ -91,19 +79,25 @@
 </section>
 
 <section>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Products</h2>
                 <hr class="my-4">
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-12">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae arcu sit amet ligula volutpat finibus sit amet eget enim. Integer luctus, enim quis aliquet pellentesque, ex ligula porta risus, aliquet imperdiet lectus neque ac est. 
+                    Our professional team is up to date on the latest contemporary styles, coloring, and relaxation techniques, 
+                    with a primary focus on the client's needs for a "satisfaction guaranteed" result. The team continually updates 
+                    their expertise by attending classes, including the annual New York City Hair Convention.
+                </p>
+                <p>
+                    We specialize in the Wella color line and hold "in salon" education. Our team is current in the latest innovation in color 
+                    techniques and application, working creatively to share ideas with technicians and clientele.
                 </p>
             </div>
         </div>
