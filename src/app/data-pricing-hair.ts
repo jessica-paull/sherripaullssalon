@@ -47,11 +47,11 @@ export const HairPricing: Pricing[] = [
             },
             {
                 'label': 'Whole Head Color',
-                'price': '$20 adl'
+                'price': '+ $20'
             },
             {
                 'label': 'Color Refresher',
-                'price': '$30 adl'
+                'price': '+ $30'
             },
             {
                 'label': 'Foils',

@@ -28,7 +28,7 @@ a {
 }
 
 .secondary-link {
-  color: $secondary;
+  color: white;
   @include transition-all;
   &:hover {
     color: darken($secondary, .1);
