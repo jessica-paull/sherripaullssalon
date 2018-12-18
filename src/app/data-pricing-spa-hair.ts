@@ -12,6 +12,14 @@ export const SpaHairPricing: Pricing[] = [
             {
                 'label': 'Upperlip',
                 'price': '$15'
+            },
+            {
+                'label': 'Chin',
+                'price': '$15'
+            },
+            {
+                'label': 'Side Burns',
+                'price': '$16'
             }
         ]
     }

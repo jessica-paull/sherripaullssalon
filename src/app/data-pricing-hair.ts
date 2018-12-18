@@ -26,6 +26,36 @@ export const HairPricing: Pricing[] = [
             {
                 'label': 'Blowdry Straightening',
                 'price': '$35'
+            },
+            {
+                'label': 'Flat Iron',
+                'price': '$15'
+            },
+            {
+                'label': 'Special Up Do Style',
+                'price': '$35'
+            }
+        ]
+    },
+    {
+        'name': 'Hair Color',
+        'desc': '',
+        'rates': [
+            {
+                'label': 'Color Root Retouch',
+                'price': '$85'
+            },
+            {
+                'label': 'Whole Head Color',
+                'price': '$20 adl'
+            },
+            {
+                'label': 'Color Refresher',
+                'price': '$30 adl'
+            },
+            {
+                'label': 'Foils',
+                'price': '$125'
             }
         ]
     },

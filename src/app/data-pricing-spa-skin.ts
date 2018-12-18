@@ -20,5 +20,15 @@ export const SpaSkinPricing: Pricing[] = [
                 'price': '$75'
             }
         ]
+    },
+    {
+        'name': 'Hydra Refine Pore Perfect Facial',
+        'desc': 'Controls oil, rids skin of impurities and help eliminate future breakouts.',
+        'rates': [
+            {
+                'label': '',
+                'price': '$75'
+            }
+        ]
     }
 ];

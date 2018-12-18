@@ -39,21 +39,19 @@
 <router-outlet (activate)="onActivate($event)"></router-outlet>
 
 <!-- Footer: social media, address, phone number, hours-->
+
 <footer class="bg-dark page-footer">
   <div class="container">
       <div class="row">
-        <div class="col-sm-6">
-          518-399-3556 <br />
-          105 Mohawk Ave <br />
-          Scotia, NY 12302
-          <div>
-            <a class="secondary-link" href="#">Subscribe to our newsletter</a>
+        <div class="col-sm-4">
+          <div class="uppercase">
+            Connect With Us
           </div>
-        </div>
-        <div class="col-sm-6">
-          Tu - Fri 10:00 AM - 6:00 PM <br />
-          Sat - Su 12 PM - 6:00 PM
-          <div class="small">Follow us</div>
+          <div>
+            Email promotions, news, and information
+            <input type="text" placeholder="address@example.com" />
+            <button type="button">Subscribe</button>
+          </div>
           <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -67,6 +65,29 @@
               </li>
           </ul>
         </div>
+        <div class="col-sm-4">
+            <div class="uppercase">
+              Reach Us
+            </div>
+            <div>
+                <a class="secondary-link" href="#">518-399-3556 </a><br />
+                <a class="secondary-link" href="mailto:sherripaullssalon@yahoo.com">SherriPaullsSalon@yahoo.com</a>
+            </div>
+            
+          </div>
+        <div class="col-sm-4">
+          <div class="uppercase">
+            Visit Us
+          </div>
+          <a class="secondary-link" href="#">105 Mohawk Ave, Scotia, NY 12302</a><br />
+          Tu - Fri 10:00 AM - 6:00 PM <br />
+          Sat - Su 12 PM - 6:00 PM
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        &copy; 2018 Sherri Paull's Salon &amp; Spa
+      </div>
     </div>
   </div>
 </footer>
