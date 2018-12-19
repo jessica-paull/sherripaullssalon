@@ -11,7 +11,7 @@ export const SpaNailPricing: Pricing[] = [
             },
             {
                 'label': 'Shellac Polish',
-                'price': '$15'
+                'price': '$25'
             },
             {
                 'label': 'Shellac Removal',

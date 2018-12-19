@@ -48,6 +48,10 @@ h5 {
   color: $primary;
 }
 
+.color-primary {
+  color: $primary;
+}
+
 .pouty-font {
   font-family: "pouty","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
@@ -92,4 +96,16 @@ img::selection {
 img::-moz-selection {
   color: $white;
   background: transparent;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.map-parallax {
+  background-image: url('../../assets/img/map.png');
+  height: 500px;
 }

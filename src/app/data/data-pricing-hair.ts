@@ -7,11 +7,11 @@ export const HairPricing: Pricing[] = [
         'rates': [
             {
                 'label': 'Women',
-                'price': '$38'
+                'price': '$42'
             },
             {
                 'label': 'Men',
-                'price': '$20'
+                'price': '$25'
             }
         ]
     },
@@ -34,6 +34,10 @@ export const HairPricing: Pricing[] = [
             {
                 'label': 'Special Up Do Style',
                 'price': '$35'
+            },
+            {
+                'label': 'Bridal',
+                'price': 'Price upon consultation'
             }
         ]
     },
@@ -56,6 +60,34 @@ export const HairPricing: Pricing[] = [
             {
                 'label': 'Foils',
                 'price': '$125'
+            },
+            {
+                'label': 'Color Correction',
+                'price': 'Price upon consultation'
+            }
+        ]
+    },
+    {
+        'name': 'Hair Texturing',
+        'desc': '',
+        'rates': [
+            {
+                'label': 'Permanent Waving',
+                'price': '$75'
+            }
+        ]
+    },
+    {
+        'name': 'Make Up Application',
+        'desc': '',
+        'rates': [
+            {
+                'label': 'Special Occassion',
+                'price': '$50'
+            },
+            {
+                'label': 'Make Up Lesson',
+                'price': '$30'
             }
         ]
     },

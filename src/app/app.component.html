@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="#page-top">
+    <a class="navbar-brand" routerLink="/home" routerActiveLink="active">
       <span class="pouty-font">Sherri Paull's</span> 
       &#160;Salon <small>&amp;</small> Spa
     </a>
@@ -38,8 +38,7 @@
 <!-- Content -->
 <router-outlet (activate)="onActivate($event)"></router-outlet>
 
-<!-- Footer: social media, address, phone number, hours-->
-
+<!-- Footer -->
 <footer class="bg-dark page-footer">
   <div class="container">
       <div class="row">
@@ -62,17 +61,17 @@
             Contact
           </div>
           <div>
-              <a class="secondary-link" href="#">518-399-3556 </a><br />
+              <a class="secondary-link" href="tel:+15183993556">518-399-3556</a><br />
               <a class="secondary-link" href="mailto:sherripaullssalon@yahoo.com">SherriPaullsSalon@yahoo.com</a>
           </div>
           <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/Sherri-Paulls-Salon-Spa-380672802058/">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.instagram.com/sherrispa/">
                   <i class="fab fa-instagram"></i>
                 </a>
               </li>
@@ -83,8 +82,8 @@
             Visit
           </div>
           <a class="secondary-link" href="#">105 Mohawk Ave, Scotia, NY 12302</a><br />
-          Tu - Fri 10:00 AM - 6:00 PM <br />
-          Sat - Su 12 PM - 6:00 PM
+          Tue - Fri 10:00 AM - 6:00 PM <br />
+          Sat - Su 10:00 AM - 3:00 PM
         </div>
     </div>
     <div class="row">

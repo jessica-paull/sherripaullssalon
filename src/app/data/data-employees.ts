@@ -14,13 +14,13 @@ export const Employees: Employee[] = [
         'bio': ''
     },
     {
-        'name': 'Lorrie Flower',
+        'name': 'Amanda Cavoli',
         'title': 'Stylist',
         'image': 'stylist_default.jpg',
         'bio': ''
     },
     {
-        'name': 'Amanda Cavoli',
+        'name': 'Allie Dordan',
         'title': 'Stylist',
         'image': 'stylist_default.jpg',
         'bio': ''
@@ -32,13 +32,7 @@ export const Employees: Employee[] = [
         'bio': ''
     },
     {
-        'name': 'Andrea Johnson',
-        'title': 'Esthetician, Waxing, Makeup Artist',
-        'image': 'stylist_default.jpg',
-        'bio': ''
-    },
-    {
-        'name': 'Newe Haile',
+        'name': 'Karen Srocynski',
         'title': 'Massage Therapist',
         'image': 'stylist_default.jpg',
         'bio': ''
