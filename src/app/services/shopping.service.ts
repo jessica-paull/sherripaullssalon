@@ -57,6 +57,17 @@ export class ShoppingService {
     this.dispatchCart(newCart);
   }
 
+  recalculateCart(shopItem: ShopItem): void {
+    const cart = this.retrieveCart();
+    const item = cart.items.find((p) => p.sku === shopItem.sku);
+    if (item) {
+      item.quantity = shopItem.quantity;
+    }
+    this.calculateCart(cart);
+    this.saveCart(cart);
+    this.dispatchCart(cart);
+  }
+
   private calculateCart(cart: ShoppingCart): void {
     cart.itemsTotal = cart.items
                           .map((item) => item.quantity * item.price)

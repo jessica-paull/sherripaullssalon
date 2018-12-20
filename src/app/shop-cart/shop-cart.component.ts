@@ -25,7 +25,7 @@ export class ShopCartComponent implements OnInit {
   constructor(private shoppingService: ShoppingService) { }
 
   ngOnInit() {
-    this.cartTotal = 0.00;
+    this.cartTotal = 0;
     this.cartCount = 0;
     this.initPaypalConfig();
     this.shoppingCart = this.shoppingService.getCart();
@@ -40,6 +40,11 @@ export class ShopCartComponent implements OnInit {
     if (this.cartSubscription) {
       this.cartSubscription.unsubscribe();
     }
+  }
+
+  calculateCart(shopItem: ShopItem): void {
+    shopItem.quantity = shopItem.quantity ? shopItem.quantity : 1;
+    this.shoppingService.recalculateCart(shopItem);
   }
 
   emptyCart(): void {

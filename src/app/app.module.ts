@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { NgxPayPalModule } from 'ngx-paypal';
 
@@ -36,6 +37,7 @@ import { PageHeaderComponent } from './page-header/page-header.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NgxPayPalModule
   ],

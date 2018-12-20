@@ -2,21 +2,30 @@ import { ShopItem } from './models.shopping';
 
 export const ShopItems: ShopItem[] = [
     {
-        'name': 'Gift Card One',
-        'desc': 'Test of gift card number one',
+        'name': 'Rejuvenating Deluxe',
+        'desc': 'Refresh & rebalance from your head to your fingertips.',
         'quantity': 1,
-        'price': 10,
+        'price': 155,
         'tax': 0,
         'sku': 1,
         'currency': 'USD'
     },
     {
-        'name': 'Gift Card Two',
-        'desc': 'Test of gift card number two',
+        'name': 'Nourish & Replenish',
+        'desc': 'Re-balance yourself or give this gift to a loved one with a European facial and 1-hour massage of choice.',
         'quantity': 1,
-        'price': 20,
+        'price': 145,
         'tax': 0,
         'sku': 2,
+        'currency': 'USD'
+    },
+    {
+        'name': 'Classic Package',
+        'desc': 'Get a lift, your choice of facial, as well as a contouring eyebrow waxing.',
+        'quantity': 1,
+        'price': 79,
+        'tax': 0,
+        'sku': 3,
         'currency': 'USD'
     }
 ];

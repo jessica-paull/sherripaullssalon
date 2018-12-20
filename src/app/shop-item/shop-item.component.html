@@ -1,9 +1,18 @@
-<div class="row">
-  <div class="col-8">
-    {{shopItem.name}} <br />
-    {{shopItem.desc}}
-  </div>
-  <div class="col-2">
-    <button type="button" class="btn btn-sm btn-primary" (click)="addToCart(shopItem)">Add To Cart</button>
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="card-text">
+      <div class="clearfix">
+        <h5 class="float-left">
+            {{shopItem.name}}
+        </h5>
+        <em class="float-right">
+            {{shopItem.price | currency}}
+        </em>
+      </div>
+      <p>{{shopItem.desc}}</p>
+    </div>
+    <div class="mt-2 text-right">
+      <button type="button" class="btn btn-sm btn-primary ml-2" (click)="addToCart(shopItem)">Add To Cart</button>
+    </div>
   </div>
 </div>

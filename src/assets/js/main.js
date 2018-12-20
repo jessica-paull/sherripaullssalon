@@ -1,4 +1,12 @@
 
+function restrictQuantity(elem) {
+  var pattern = new RegExp(/^([1-9]|[1-9][0-9])?$/);
+  var valid = pattern.test(elem.value);
+  if (!valid) {
+    elem.value = elem.value > 99 ? elem.value.substring(0, 2) : 1;
+  }
+}
+
 (function($) {
     "use strict"; // Start of use strict
   
