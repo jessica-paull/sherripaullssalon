@@ -9,7 +9,9 @@ import { SpaNailPricing } from '../data/data-pricing-spa-nail';
 import { SpaSkinPricing } from '../data/data-pricing-spa-skin';
 import { SpaMassagePricing } from '../data/data-pricing-spa-massage';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PricingService {
 
   constructor() { }

@@ -1,0 +1,16 @@
+<div class="">
+    Items in Cart: {{cartCount}}
+    <div *ngFor="let item of shopCartItems">
+      <div class="row">
+        <div class="col-8">
+          {{item.name}}
+        </div>
+        <div class="col-2">
+          {{item.price}}
+        </div>
+      </div>
+    </div>
+    Cart Total: ${{cartTotal}}
+</div>
+<button type="button" class="btn btn-sm btn-secondary" (click)="emptyCart()">Empty Cart</button>
+<ngx-paypal [config]="payPalConfig"></ngx-paypal>

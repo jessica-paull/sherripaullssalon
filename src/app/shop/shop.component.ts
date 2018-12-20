@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ShopItem } from '../data/models.shopping';
+import { ShoppingService } from '../services/shopping.service';
+
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopComponent implements OnInit {
 
-  constructor() { }
+  shopItems: ShopItem[];
+
+  constructor(private shoppingService: ShoppingService) { }
 
   ngOnInit() {
+    this.shoppingService.getShopItems()
+      .subscribe(shopItems => this.shopItems = shopItems);
   }
 
 }
