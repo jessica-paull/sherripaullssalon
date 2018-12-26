@@ -19,6 +19,7 @@ export class ShopCartComponent implements OnInit {
   shoppingCart: Observable<ShoppingCart>;
   cartTotal: number;
   cartCount: number;
+  pickupInStore: boolean;
 
   private cartSubscription: Subscription;
 
@@ -27,6 +28,7 @@ export class ShopCartComponent implements OnInit {
   ngOnInit() {
     this.cartTotal = 0;
     this.cartCount = 0;
+    this.pickupInStore = false;
     this.initPaypalConfig();
     this.shoppingCart = this.shoppingService.getCart();
     this.cartSubscription = this.shoppingCart.subscribe((cart) => {
@@ -43,7 +45,7 @@ export class ShopCartComponent implements OnInit {
   }
 
   calculateCart(shopItem: ShopItem): void {
-    shopItem.quantity = shopItem.quantity ? shopItem.quantity : 1;
+    shopItem.quantity = +shopItem.quantity ? +shopItem.quantity : 1;
     this.shoppingService.recalculateCart(shopItem);
   }
 
@@ -107,6 +109,7 @@ export class ShopCartComponent implements OnInit {
               }
             }
           ];
+          this.payPalConfig.experience.noShipping = (this.pickupInStore ? true : false);
         },
         validate: (actions) => {
           console.log(actions);

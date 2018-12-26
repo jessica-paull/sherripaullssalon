@@ -18,6 +18,9 @@ export class ShopItemComponent implements OnInit {
   }
 
   addToCart(shopItem: ShopItem): void {
+    if (!(shopItem.price > 0)) {
+      shopItem.price = 50;
+    }
     this.shoppingService.addToCart(shopItem);
   }
 

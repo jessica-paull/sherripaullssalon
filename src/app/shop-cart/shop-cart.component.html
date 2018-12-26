@@ -29,7 +29,7 @@
       </div>
       <div class="col-6 col-sm-3">
         <span class="float-left pr-2">x</span>
-        <input type="number"
+        <input type="text"
           class="form-control form-control-sm"
           style="width:50px;"
           ng-maxlength="2" 
@@ -41,17 +41,29 @@
       </div>
     </div>
 
-    <div class="row" *ngIf="cartCount > 0">
-      <div class="col-6 col-sm-9 text-right">
-        Cart Total: {{cartTotal | currency}}
-      </div>
-      <div class="col-6 col-sm-3"></div>
-    </div>
+    <div *ngIf="cartCount > 0">
 
-    <div class="row" *ngIf="cartCount > 0">
-      <div class="col-12 text-center mt-3">
-        <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+      <div class="row">
+        <div class="col-6 col-sm-9 text-right">
+          Cart Total: {{cartTotal | currency}}
+        </div>
+        <div class="col-6 col-sm-3"></div>
       </div>
+
+      <div clsas="row">
+        <div class="col-6 col-sm-9 text-right font-italic">
+          Pickup In Store&#160;&#160;
+          <input type="checkbox" [(ngModel)]="pickupInStore">
+        </div>
+        <div class="col-6 col-sm-3"></div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12 text-center mt-3">
+          <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+        </div>
+      </div>      
+
     </div>
 
   </div>

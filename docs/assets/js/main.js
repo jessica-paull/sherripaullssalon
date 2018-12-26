@@ -8,13 +8,19 @@ function restrictQuantity(elem) {
 }
 
 function collapseNav() {
-  if ($(".navbar-collapse.show").length) {
+  if ($('.navbar-collapse.show').length) {
     $('.navbar-toggler').click();
   }
 }
 
 $(function() {
-  $('.cost-input').regexConstrain({ regex: /^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])?$/, length: 3 });
+  $('.cost-input')
+    .regexConstrain({ regex: /^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])?$/, length: 3 })
+    .blur(function() {
+      if (this.value == '') {
+        this.value = '50';
+      }
+    });
 });
 
 (function ($) {
