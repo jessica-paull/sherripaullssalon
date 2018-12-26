@@ -8,11 +8,81 @@ function restrictQuantity(elem) {
 }
 
 function collapseNav() {
-  console.log('test');
   if ($(".navbar-collapse.show").length) {
     $('.navbar-toggler').click();
   }
 }
+
+$(function() {
+  $('.cost-input').regexConstrain({ regex: /^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])?$/, length: 3 });
+});
+
+(function ($) {
+  $.fn.regexConstrain = function (opt) {
+      opt = $.extend(true, {}, {
+          length: null,
+          regex: ""
+      }, opt);
+
+
+      //has prohibit or regex been configured by user?
+      function isConfigured(item) {
+          return (item.regex && item.regex.length > 0) || (item.length);
+      };
+
+      //does the prohibit or allow collection find a match given the key?
+      function match(item, input, e) {
+          if (item.regex) {
+              var re = new RegExp(item.regex);
+              var jInput = $(input);
+              if (re.test(jInput.val())) {
+                  return false;
+              } else {
+              }
+          }
+
+          return true;
+      };
+
+      function isLength(item, input, e) {
+          if (item.length) {
+              var jInput = $(input);
+              var jVal = jInput.val();
+              if (jVal.length <= item.length) {
+                  return false;
+              }
+          }
+
+          return true;
+      };
+
+      function isProhibited(input, e) {
+          if (e.which == 8 || e.which == 27) {//always permit space,tab, or escape
+            return false;
+          }
+          var length = isLength(opt, input, e);
+          var prohibit = true;
+          if (length === false) {
+              prohibit = isConfigured(opt) ? match(opt, input, e) : false;
+          }
+          return prohibit || length;
+      };
+
+      return this.each(function () {
+          var jThis = $(this);
+          jThis.attr("jqConstPrevVal", jThis.val());
+          $(this).bind("input", function (e) {
+              if (isProhibited(this, e)) {
+                  jThis.val(jThis.attr("jqConstPrevVal"));
+                  jThis.trigger("change");
+              } else {
+                  jThis.attr("jqConstPrevVal", jThis.val());
+              }
+          });
+
+      });
+  };
+})(jQuery);
 
 (function($) {
   'use strict'; // Start of use strict
