@@ -10,7 +10,7 @@ export class ShopItem {
 
 export class ShoppingCart {
     public items: ShopItem[] = new Array<ShopItem>();
-    public itemsTotal: number;
+    public itemsTotal = 0;
 
     public updateFrom(src: ShoppingCart) {
         this.items = src.items;

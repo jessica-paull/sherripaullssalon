@@ -339,6 +339,11 @@ MIT
 @angular/router
 MIT
 
+@angular/forms
+MIT
+
+ngx-paypal
+
 zone.js
 MIT
 The MIT License

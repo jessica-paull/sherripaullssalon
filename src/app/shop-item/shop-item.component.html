@@ -3,16 +3,31 @@
     <div class="card-text">
       <div class="clearfix">
         <h5 class="float-left">
-            {{shopItem.name}}
+          {{shopItem.name}}
         </h5>
-        <em class="float-right">
+        <em class="text-right">
+          <div *ngIf="shopItem.sku !== 1; else customPrice">
             {{shopItem.price | currency}}
+          </div>
+          <ng-template #customPrice>
+            <input 
+            type="text"
+            class="float-right form-control form-control-sm cost-input" 
+            style="width:100px;"
+            [(ngModel)]="shopItem.price">
+            <span class="float-right pr-2">$</span>
+          </ng-template>
         </em>
       </div>
       <p>{{shopItem.desc}}</p>
     </div>
     <div class="mt-2 text-right">
-      <button type="button" class="btn btn-sm btn-primary ml-2" (click)="addToCart(shopItem)">Add To Cart</button>
+      <button 
+      type="button"
+      class="btn btn-sm btn-primary ml-2" 
+      (click)="addToCart(shopItem)">
+        Add To Cart
+      </button>
     </div>
   </div>
 </div>

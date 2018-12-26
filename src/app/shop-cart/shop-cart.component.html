@@ -2,36 +2,53 @@
 
   <div class="card-header">
     Items in Cart: {{cartCount}}
-    <button type="button" class="btn btn-sm btn-secondary float-right" (click)="emptyCart()">Empty Cart</button>
+    <button 
+    type="button"
+    class="btn btn-sm btn-secondary float-right" 
+    *ngIf="cartCount > 0"
+    (click)="emptyCart()">
+      Empty Cart
+    </button>
   </div>
 
   <div class="card-body">
 
+    <p *ngIf="cartCount < 1">Cart is empty.</p>
+
     <div class="row" *ngFor="let item of shopCartItems">
       <div class="col-12 col-sm-6">
         {{item.name}}
+        <a [routerLink]="" 
+        class="text-danger"
+        (click)="removeFromCart(item)">
+          (remove)
+        </a>
       </div>
       <div class="col-6 col-sm-3 text-right">
         {{item.price | currency}}
       </div>
       <div class="col-6 col-sm-3">
+        <span class="float-left pr-2">x</span>
         <input type="number"
           class="form-control form-control-sm"
+          style="width:50px;"
           ng-maxlength="2" 
+          min="1"
+          max="99"
           [(ngModel)]="item.quantity"
           (change)="calculateCart(item)"
           onkeyup="restrictQuantity(this)">
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" *ngIf="cartCount > 0">
       <div class="col-6 col-sm-9 text-right">
         Cart Total: {{cartTotal | currency}}
       </div>
       <div class="col-6 col-sm-3"></div>
     </div>
 
-    <div class="row">
+    <div class="row" *ngIf="cartCount > 0">
       <div class="col-12 text-center mt-3">
         <ngx-paypal [config]="payPalConfig"></ngx-paypal>
       </div>
@@ -39,4 +56,29 @@
 
   </div>
 
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" [hidden]="true" class="btn btn-primary" data-toggle="modal" data-target="#confirmationModal" id="showConfirmationModal">
+  Show Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmationModalLabel">Purchase Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Thank you for your purchase!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

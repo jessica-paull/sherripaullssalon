@@ -39,13 +39,22 @@ export class ShoppingService {
 
   addToCart(shopItem: ShopItem): void {
     const cart = this.retrieveCart();
-    const item = cart.items.find((p) => p.sku === shopItem.sku);
+    const item = cart.items.find((p) => p.sku === shopItem.sku && p.price === shopItem.price);
     if (item === undefined) {
-      cart.items.push(shopItem);
+      const newItem = Object.assign({}, shopItem);
+      cart.items.push(newItem);
     } else {
       item.quantity += 1;
     }
 
+    this.calculateCart(cart);
+    this.saveCart(cart);
+    this.dispatchCart(cart);
+  }
+
+  removeFromCart(shopItem: ShopItem): void {
+    const cart = this.retrieveCart();
+    cart.items = cart.items.filter((p) => p.sku !== shopItem.sku || p.price !== shopItem.price);
     this.calculateCart(cart);
     this.saveCart(cart);
     this.dispatchCart(cart);

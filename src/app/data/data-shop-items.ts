@@ -2,12 +2,21 @@ import { ShopItem } from './models.shopping';
 
 export const ShopItems: ShopItem[] = [
     {
+        'name': 'Gift Certificate',
+        'desc': 'Choose a custom gift certificate amount.',
+        'quantity': 1,
+        'price': 50,
+        'tax': 0,
+        'sku': 1,
+        'currency': 'USD'
+    },
+    {
         'name': 'Rejuvenating Deluxe',
         'desc': 'Refresh & rebalance from your head to your fingertips.',
         'quantity': 1,
-        'price': 155,
+        'price': 165,
         'tax': 0,
-        'sku': 1,
+        'sku': 2,
         'currency': 'USD'
     },
     {
@@ -16,16 +25,16 @@ export const ShopItems: ShopItem[] = [
         'quantity': 1,
         'price': 145,
         'tax': 0,
-        'sku': 2,
+        'sku': 3,
         'currency': 'USD'
     },
     {
         'name': 'Classic Package',
         'desc': 'Get a lift, your choice of facial, as well as a contouring eyebrow waxing.',
         'quantity': 1,
-        'price': 79,
+        'price': 85,
         'tax': 0,
-        'sku': 3,
+        'sku': 4,
         'currency': 'USD'
     }
 ];

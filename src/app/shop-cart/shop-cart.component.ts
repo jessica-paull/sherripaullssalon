@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Observer, of, Subscription } from 'rxjs';
 
-import { PayPalConfig, PayPalEnvironment, PayPalIntegrationType } from 'ngx-paypal';
+import { PayPalConfig, PayPalEnvironment, PayPalIntegrationType, IPayPalTransactionItem } from 'ngx-paypal';
 
 import { ShoppingCart } from '../data/models.shopping';
 import { ShopItem } from '../data/models.shopping';
@@ -51,6 +51,10 @@ export class ShopCartComponent implements OnInit {
     this.shoppingService.emptyCart();
   }
 
+  removeFromCart(shopItem: ShopItem): void {
+    this.shoppingService.removeFromCart(shopItem);
+  }
+
   private initPaypalConfig(): void {
     this.payPalConfig = new PayPalConfig(
       PayPalIntegrationType.ClientSideREST,
@@ -59,75 +63,59 @@ export class ShopCartComponent implements OnInit {
         commit: true,
         client: {
           sandbox:
-            'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
+            'AeXnnPbGFM6oUzgbEc0SUt0k6nP5K2Pyblljqgo8u0u5h7sc1W1FdhWo-gDAUndqkpdXslcB6gT-tIMA'
         },
         button: {
           label: 'paypal',
           layout: 'vertical'
         },
         onAuthorize: (data, actions) => {
-          console.log('Authorize');
           return of(undefined);
         },
         onPaymentComplete: (data, actions) => {
-          console.log('OnPaymentComplete');
+          document.getElementById('showConfirmationModal').click();
+          this.emptyCart();
         },
         onCancel: (data, actions) => {
-          console.log('OnCancel');
+          // console.log('OnCancel');
         },
         onError: err => {
-          console.log('OnError');
+          console.log('OnError' + err);
         },
         onClick: () => {
-          console.log('onClick');
+          const items = [];
+          for (let i = 0; i < this.shopCartItems.length; i++) {
+            const item = this.shopCartItems[i];
+            items.push({
+              name: item.name,
+              description: item.desc,
+              quantity: item.quantity,
+              price: item.price,
+              tax: item.tax,
+              sku: item.sku,
+              currency: item.currency
+            });
+          }
+          this.payPalConfig.transactions = [
+            {
+              amount: {
+                total: this.cartTotal,
+                currency: 'USD'
+              },
+              item_list: {
+                items: items
+              }
+            }
+          ];
         },
         validate: (actions) => {
           console.log(actions);
         },
         experience: {
-          noShipping: true,
+          noShipping: false,
           brandName: 'Sherri Paull\'s Salon & Spa'
         },
-        transactions: [
-          {
-            amount: {
-              // total: 30.11,
-              total: 0,
-              currency: 'USD'
-              // details: {
-              //   subtotal: 30.00,
-              //   tax: 0.07,
-              //   shipping: 0.03,
-              //   handling_fee: 1.00,
-              //   shipping_discount: -1.00,
-              //   insurance: 0.01
-              // }
-            },
-            item_list: {
-              items: [
-                // {
-                //   name: 'hat',
-                //   description: 'Brown hat.',
-                //   quantity: 5,
-                //   price: 3,
-                //   tax: 0.01,
-                //   sku: '1',
-                //   currency: 'USD'
-                // }
-              ],
-              // shipping_address: {
-              //   recipient_name: 'Brian Robinson',
-              //   line1: '4th Floor',
-              //   line2: 'Unit #34',
-              //   city: 'San Jose',
-              //   country_code: 'US',
-              //   postal_code: '95131',
-              //   phone: '011862212345678',
-              //   state: 'CA'
-              // }
-            }
-          }
-        ],
+        transactions: [],
         note_to_payer: 'Contact us if you have trouble processing payment'
       }
     );
