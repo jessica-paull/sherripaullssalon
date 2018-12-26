@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StringifyOptions } from 'querystring';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,10 @@ export class ContactComponent implements OnInit {
   headerTitle: String;
   headerSubtext: String;
 
+  formName: String;
+  formEmail: String;
+  formMessage: String;
+
   constructor() { }
 
   ngOnInit() {
@@ -18,6 +23,11 @@ export class ContactComponent implements OnInit {
     this.headerTitle = 'Let\'s get in touch';
     // tslint:disable-next-line:max-line-length
     this.headerSubtext = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+  }
+
+  submitContactForm (form): void {
+    const testVar = 'test';
+    form.reset();
   }
 
 }

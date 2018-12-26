@@ -16,25 +16,55 @@
         
                 <div class="card">
                     <div class="card-body">
-                        <div class="">
-                            <label for="form-name">Name</label>
-                            <input type="text" id="form-name" class="form-control">
-                        </div>
-                        <div class="">
-                            <label for="form-email">Email</label>
-                            <input type="text" id="form-email" class="form-control">
-                        </div>
-                        <div class="">
-                            <label for="form-Subject">Subject</label>
-                            <input type="text" id="form-subject" class="form-control">
-                        </div>
-                        <div class="">
-                            <label for="form-text">Message</label>
-                            <textarea type="text" id="form-text" class="form-control" rows="3"></textarea>
-                        </div>
-                        <div class="text-center mt-3">
-                            <button class="btn btn-sm btn-primary">Submit</button>
-                        </div>
+                        <form action="https://formspree.io/jessica.paull08@gmail.com" method="POST">
+                            <div class="">
+                                <label for="form-name">Name</label>
+                                <input 
+                                type="text" 
+                                id="form-name" 
+                                class="form-control"
+                                name="name"
+                                [(ngModel)]="formName"
+                                required
+                                #nameInput="ngModel">
+                                <div class="alert alert-danger" *ngIf="nameInput.errors && nameInput.touched">
+                                    Please enter your name.
+                                </div>
+                            </div>
+                            <div class="">
+                                <label for="form-email">Email</label>
+                                <input 
+                                type="text" 
+                                id="form-email" 
+                                class="form-control"
+                                name="email"
+                                [(ngModel)]="formEmail"
+                                required
+                                email
+                                #emailInput="ngModel">
+                                <div class="alert alert-danger" *ngIf="emailInput.errors && emailInput.touched">
+                                    Please enter a valid email.
+                                </div>
+                            </div>
+                            <div class="">
+                                <label for="form-text">Message</label>
+                                <textarea 
+                                id="form-message" 
+                                class="form-control"
+                                name="message"
+                                [(ngModel)]="formMessage"
+                                required
+                                #messageInput="ngModel"></textarea>
+                                <div class="alert alert-danger" *ngIf="messageInput.errors && messageInput.touched">
+                                    Please enter a message.
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-sm btn-primary" type="submit" [disabled]="!contactForm.valid">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
         

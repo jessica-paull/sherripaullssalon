@@ -60,12 +60,14 @@ export class ShopCartComponent implements OnInit {
   private initPaypalConfig(): void {
     this.payPalConfig = new PayPalConfig(
       PayPalIntegrationType.ClientSideREST,
-      PayPalEnvironment.Sandbox,
+      PayPalEnvironment.Sandbox, // PayPalEnvironment.Production
       {
         commit: true,
         client: {
           sandbox:
-            'AeXnnPbGFM6oUzgbEc0SUt0k6nP5K2Pyblljqgo8u0u5h7sc1W1FdhWo-gDAUndqkpdXslcB6gT-tIMA'
+            'AeXnnPbGFM6oUzgbEc0SUt0k6nP5K2Pyblljqgo8u0u5h7sc1W1FdhWo-gDAUndqkpdXslcB6gT-tIMA',
+          production:
+            'AW1v2lJ6eeEUzKmkHO05kKvoTrCrNEodBtJgfbOLqk2dFl0AqLtUan78OWz3fAiFaVdLShAtqKa4jata'
         },
         button: {
           label: 'paypal',
