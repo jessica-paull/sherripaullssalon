@@ -29,27 +29,5 @@ export const SpaMassagePricing: Pricing[] = [
                 'price': '$85'
             }
         ]
-    },
-    {
-        'name': 'Speciality Massages',
-        'desc': 'Book in advance',
-        'rates': [
-            {
-                'label': 'Reiki',
-                'price': ''
-            },
-            {
-                'label': 'Hot Stone',
-                'price': ''
-            },
-            {
-                'label': 'Thai Yoga',
-                'price': ''
-            },
-            {
-                'label': 'Aromatherapy',
-                'price': ''
-            }
-        ]
     }
 ];

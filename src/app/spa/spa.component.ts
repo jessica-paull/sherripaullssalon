@@ -14,7 +14,6 @@ export class SpaComponent implements OnInit {
   headerTitle: String;
   headerSubtext: String;
   hairPricing: Pricing[];
-  nailPricing: Pricing[];
   skinPricing: Pricing[];
   massagePricing: Pricing[];
 
@@ -31,9 +30,6 @@ export class SpaComponent implements OnInit {
   getPricing(): void {
     this.pricingService.getSpaHairPricing()
       .subscribe(pricing => this.hairPricing = pricing);
-
-    this.pricingService.getSpaNailPricing()
-      .subscribe(pricing => this.nailPricing = pricing);
 
     this.pricingService.getSpaSkinPricing()
       .subscribe(pricing => this.skinPricing = pricing);

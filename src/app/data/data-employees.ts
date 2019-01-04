@@ -20,19 +20,19 @@ export const Employees: Employee[] = [
         'bio': ''
     },
     {
-        'name': 'Allie Dordan',
+        'name': 'Allie Dordon',
         'title': 'Stylist',
         'image': 'stylist_default.jpg',
         'bio': ''
     },
     {
-        'name': 'Serena Perry',
+        'name': 'Serena Callahan',
         'title': 'Esthetician',
         'image': 'stylist_default.jpg',
         'bio': ''
     },
     {
-        'name': 'Karen Srocynski',
+        'name': 'Karen Sroczynski',
         'title': 'Massage Therapist',
         'image': 'stylist_default.jpg',
         'bio': ''

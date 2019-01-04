@@ -7,7 +7,7 @@ export const HairPricing: Pricing[] = [
         'rates': [
             {
                 'label': 'Women',
-                'price': '$42'
+                'price': '$45'
             },
             {
                 'label': 'Men',
@@ -73,7 +73,7 @@ export const HairPricing: Pricing[] = [
         'rates': [
             {
                 'label': 'Permanent Waving',
-                'price': '$75'
+                'price': '$85'
             }
         ]
     },

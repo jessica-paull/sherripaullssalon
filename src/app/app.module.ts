@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { SalonComponent } from './salon/salon.component';
+import { NailsComponent } from './nails/nails.component';
 import { SpaComponent } from './spa/spa.component';
 import { StaffComponent } from './staff/staff.component';
 import { ContactComponent } from './contact/contact.component';
@@ -26,6 +27,7 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     AppComponent,
     HomeComponent,
     SalonComponent,
+    NailsComponent,
     SpaComponent,
     StaffComponent,
     ContactComponent,
