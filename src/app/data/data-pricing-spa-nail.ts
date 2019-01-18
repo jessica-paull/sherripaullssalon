@@ -10,6 +10,10 @@ export const SpaNailPricing: Pricing[] = [
                 'price': '$20'
             },
             {
+                'label': 'Pedicure',
+                'price': '$30'
+            },
+            {
                 'label': 'Shellac Polish',
                 'price': '$25'
             },
@@ -18,8 +22,8 @@ export const SpaNailPricing: Pricing[] = [
                 'price': '$10'
             },
             {
-                'label': 'Pedicure',
-                'price': '$30'
+                'label': 'Peraffin',
+                'price': '$15'
             }
         ]
     },
@@ -33,10 +37,6 @@ export const SpaNailPricing: Pricing[] = [
             },
             {
                 'label': 'Deep Conditioning w/ Heated Mitts',
-                'price': '$15'
-            },
-            {
-                'label': 'Paraffin Treatment',
                 'price': '$15'
             }
         ]

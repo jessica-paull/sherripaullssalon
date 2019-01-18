@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { StringifyOptions } from 'querystring';
+// import { HttpClient } from '@angular/common/http';
+// import { StringifyOptions } from 'querystring';
+// import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -15,6 +17,7 @@ export class ContactComponent implements OnInit {
   formName: String;
   formEmail: String;
   formMessage: String;
+  // formGroup: FormGroup;
 
   constructor() { }
 
@@ -25,9 +28,14 @@ export class ContactComponent implements OnInit {
     this.headerSubtext = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
   }
 
-  submitContactForm (form): void {
-    const testVar = 'test';
-    form.reset();
+  submitContactForm (): void {
+    console.log('hit submit form');
+    // console.log(this.formGroup);
+    // // form.reset();
+    // const uri = 'http://localhost:5000/sendMail';
+    // const data = this.formGroup.getRawValue();
+    // this.http.post(uri, data)
+    //     .subscribe(res => console.log('email sent'));
   }
 
 }

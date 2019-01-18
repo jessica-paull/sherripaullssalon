@@ -21,6 +21,7 @@ import { ShopItemComponent } from './shop-item/shop-item.component';
 import { ShopCartComponent } from './shop-cart/shop-cart.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
+import { PromotionsComponent } from './promotions/promotions.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     ShopItemComponent,
     ShopCartComponent,
     PricingComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    PromotionsComponent
   ],
   imports: [
     BrowserModule,

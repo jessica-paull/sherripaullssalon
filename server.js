@@ -21,12 +21,19 @@ app.use(express.static(path.join(__dirname, 'docs')))
 // app.use('/*', express.static('./src/client/index.html'));
 
 app.post('/sendMail', function(req, res) {
-  var transporter = nodemailer.createTransport('smtps://username%40gmail.com:password@smtp.gmail.com');
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'jessica.paull08@gmail.com',
+      pass: '101uj311y'
+    }
+  });
   var data = req.body;
+  console.log(data);
   var mailOptions = {
     from: data.contactEmail,
-    to: 'something@provider.com',
-    subject: 'Email sent by ' + data.contactName,
+    to: 'jessica.paull08@gmail.com',
+    subject: 'sherripaullssalon.com message from ' + data.contactName,
     text: data.contactMessage
   };
 

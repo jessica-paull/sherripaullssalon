@@ -6,8 +6,9 @@ import { SalonComponent } from './salon/salon.component';
 import { NailsComponent } from './nails/nails.component';
 import { SpaComponent } from './spa/spa.component';
 import { StaffComponent } from './staff/staff.component';
-import { ContactComponent } from './contact/contact.component';
+import { PromotionsComponent } from './promotions/promotions.component';
 import { ShopComponent } from './shop/shop.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,8 +17,9 @@ const routes: Routes = [
   { path: 'nails', component: NailsComponent },
   { path: 'spa', component: SpaComponent },
   { path: 'staff', component: StaffComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'shop', component: ShopComponent }
+  { path: 'promotions', component: PromotionsComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({

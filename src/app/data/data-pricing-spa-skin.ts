@@ -12,32 +12,12 @@ export const SpaSkinPricing: Pricing[] = [
         ]
     },
     {
-        'name': 'Male Grooming Facial',
-        'desc': 'Hydrate, exfoliate, tone & deep pore cleanse. The ultimate skin refresher.',
+        'name': 'Hydra Dew Lift Facial',
+        'desc': 'Provides deep hydration and lifting with firming mask.',
         'rates': [
             {
                 'label': '',
-                'price': '$75'
-            }
-        ]
-    },
-    {
-        'name': 'Hydra Refine Pore Perfect Facial',
-        'desc': 'Controls oil, rids skin of impurities and help eliminate future breakouts.',
-        'rates': [
-            {
-                'label': '',
-                'price': '$75'
-            }
-        ]
-    },
-    {
-        'name': 'Hydra Facial For Sensitive Skin',
-        'desc': 'Designed to calm soothe and protect distressed skin while helping to decrease skin sensitivity.',
-        'rates': [
-            {
-                'label': '',
-                'price': '$75'
+                'price': '$85'
             }
         ]
     },
@@ -91,6 +71,20 @@ export const SpaSkinPricing: Pricing[] = [
             {
                 'label': '',
                 'price': '$30'
+            }
+        ]
+    },
+    {
+        'name': 'Add Ons',
+        'desc': '',
+        'rates': [
+            {
+                'label': 'Glycolic Peel',
+                'price': '$25'
+            },
+            {
+                'label': 'Enzyme Treatment',
+                'price': '$18'
             }
         ]
     },
