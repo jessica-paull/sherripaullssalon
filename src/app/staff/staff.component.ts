@@ -22,7 +22,7 @@ export class StaffComponent implements OnInit {
     this.headerId = 'staff-header';
     this.headerTitle = 'Meet our Staff';
     // tslint:disable-next-line:max-line-length
-    this.headerSubtext = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+    this.headerSubtext = 'Our professional team prides itself on being up to date on the latest, most innovative techniques so that you can put your best self forward.';
   }
 
   getEmployees(): void {

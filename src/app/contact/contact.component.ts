@@ -23,9 +23,9 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.headerId = 'contact-header';
-    this.headerTitle = 'Let\'s get in touch';
+    this.headerTitle = 'Contact Us';
     // tslint:disable-next-line:max-line-length
-    this.headerSubtext = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+    this.headerSubtext = 'Let\'s get in touch!';
   }
 
   submitContactForm (): void {
