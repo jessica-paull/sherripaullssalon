@@ -60,7 +60,7 @@ export class ShopCartComponent implements OnInit {
   private initPaypalConfig(): void {
     this.payPalConfig = new PayPalConfig(
       PayPalIntegrationType.ClientSideREST,
-      PayPalEnvironment.Sandbox, // PayPalEnvironment.Production
+      PayPalEnvironment.Production, // PayPalEnvironment.Production
       {
         commit: true,
         client: {

@@ -37,7 +37,7 @@ export const HairPricing: Pricing[] = [
             },
             {
                 'label': 'Bridal',
-                'price': 'Price upon consultation'
+                'price': 'Consult'
             }
         ]
     },
@@ -63,7 +63,7 @@ export const HairPricing: Pricing[] = [
             },
             {
                 'label': 'Color Correction',
-                'price': 'Price upon consultation'
+                'price': 'Consult'
             }
         ]
     },

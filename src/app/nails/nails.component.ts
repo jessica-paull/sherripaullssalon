@@ -22,7 +22,7 @@ export class NailsComponent implements OnInit {
     this.headerId = 'nails-header';
     this.headerTitle = 'Nail Treatments';
     // tslint:disable-next-line:max-line-length
-    this.headerSubtext = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+    this.headerSubtext = 'Rejuvenate and pamper with a relaxing nail treatment.';
   }
 
   getPricing(): void {

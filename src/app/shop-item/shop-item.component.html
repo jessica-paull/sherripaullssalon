@@ -6,7 +6,7 @@
           {{shopItem.name}}
         </h5>
         <em class="text-right">
-          <div *ngIf="shopItem.sku !== 1; else customPrice">
+          <div *ngIf="shopItem.sku !== 1 && shopItem.sku !== 5; else customPrice">
             {{shopItem.price | currency}}
           </div>
           <ng-template #customPrice>

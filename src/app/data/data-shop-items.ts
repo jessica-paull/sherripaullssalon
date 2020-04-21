@@ -2,6 +2,15 @@ import { ShopItem } from './models.shopping';
 
 export const ShopItems: ShopItem[] = [
     {
+        'name': 'Donation',
+        'desc': 'We are grateful for donations to help us get through this difficult time of closure due to the COVID-19 pandemic.',
+        'quantity': 1,
+        'price': 50,
+        'tax': 0,
+        'sku': 5,
+        'currency': 'USD'
+    },
+    {
         'name': 'Gift Certificate',
         'desc': 'Choose a custom gift certificate amount.',
         'quantity': 1,

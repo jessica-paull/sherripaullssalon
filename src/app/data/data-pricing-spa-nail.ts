@@ -22,7 +22,7 @@ export const SpaNailPricing: Pricing[] = [
                 'price': '$10'
             },
             {
-                'label': 'Peraffin',
+                'label': 'Paraffin',
                 'price': '$15'
             }
         ]

@@ -1,5 +1,50 @@
+<!-- TEMPORARY COVID-19 NOTICE -->
+<div class="modal fade" id="covidModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">A message regarding COVID-19</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          We are temporarily closed due to the COVID-19 situation, 
+          however we are offering product deliveries and gift cards! 
+          <br /><br />
+          Please <a href="tel:+15183993556">call</a> for product delivery, 
+          or visit our 
+          <a routerLink="/shop" routerActiveLink="active">
+            online shop
+          </a>
+          if you would like to purchase a gift card or donation.
+          <br /><br />
+          We want to thank everyone for their support during this time, 
+          and we look forward to seeing you again soon. 
+          <br /><br />
+          Stay home &amp; stay safe! 🌷❤️
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
+
+  <!-- TEMPORARY COVID-19 NOTICE -->
+  <div class="nav-top-banner-notice">
+    We are temporarily closed due to COVID-19
+    <span class="banner-notice-show-more" data-toggle="modal" data-target="#covidModal">(show more)</span>
+  </div>
+
   <div class="container">
     <a class="navbar-brand" routerLink="/home" routerActiveLink="active">
       <span class="pouty-font">Sherri Paull's</span> 
@@ -97,12 +142,12 @@
           <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="https://www.facebook.com/Sherri-Paulls-Salon-Spa-380672802058/">
-                  <i class="fab fa-facebook-f"></i>
+                  <i class="color-secondary fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a href="https://www.instagram.com/sherrispa/">
-                  <i class="fab fa-instagram"></i>
+                  <i class="color-secondary fab fa-instagram"></i>
                 </a>
               </li>
           </ul>

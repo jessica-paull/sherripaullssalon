@@ -14,12 +14,6 @@ export const Employees: Employee[] = [
         'bio': ''
     },
     {
-        'name': 'Amanda Cavoli',
-        'title': 'Stylist',
-        'image': 'stylist_default.jpg',
-        'bio': ''
-    },
-    {
         'name': 'Allie Dordon',
         'title': 'Stylist',
         'image': 'stylist_default.jpg',
