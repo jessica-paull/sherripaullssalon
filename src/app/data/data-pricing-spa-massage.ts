@@ -27,7 +27,25 @@ export const SpaMassagePricing: Pricing[] = [
             {
                 'label': '60 minutes',
                 'price': '$85'
+            },
+            {
+                'label': 'Chair Massage (15min minimum)',
+                'price': '$1/min'
             }
         ]
-    }
+    },
+    {
+        'name': 'Add Ons',
+        'desc': '',
+        'rates': [
+            {
+                'label': 'Aromatherapy',
+                'price': ''
+            },
+            {
+                'label': 'Reflexology',
+                'price': ''
+            }
+        ]
+    },
 ];

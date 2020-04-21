@@ -35,23 +35,23 @@ export const SpaHairPricing: Pricing[] = [
             },
             {
                 'label': 'Bikini',
-                'price': '$25'
+                'price': '$35'
             },
             {
                 'label': 'French Bikini',
-                'price': '$30'
+                'price': '$45'
             },
             {
                 'label': 'Back',
-                'price': '$55'
+                'price': '$65'
             },
             {
                 'label': 'Underarm',
-                'price': '$25'
+                'price': '$30'
             },
             {
                 'label': 'Brazilian',
-                'price': '$65'
+                'price': '$70'
             }
         ]
     }

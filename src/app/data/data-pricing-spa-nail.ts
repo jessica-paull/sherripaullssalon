@@ -6,20 +6,36 @@ export const SpaNailPricing: Pricing[] = [
         'desc': '',
         'rates': [
             {
-                'label': 'Manicure w/ Hand Massage',
+                'label': 'Classic Manicure w/ Hand Massage',
                 'price': '$20'
             },
             {
-                'label': 'Pedicure',
+                'label': 'Classic Pedicure',
                 'price': '$30'
             },
             {
-                'label': 'Shellac Polish',
+                'label': 'Shellac Polish w/o Manicure',
                 'price': '$25'
+            },
+            {
+                'label': 'Shellac Re-Polish',
+                'price': '$30'
+            },
+            {
+                'label': 'Shellac Manicure',
+                'price': '$30'
+            },
+            {
+                'label': 'Re-Shellac Manicure',
+                'price': '$30'
             },
             {
                 'label': 'Shellac Removal',
                 'price': '$10'
+            },
+            {
+                'label': 'French Polish',
+                'price': '$5'
             },
             {
                 'label': 'Paraffin',
@@ -28,12 +44,16 @@ export const SpaNailPricing: Pricing[] = [
         ]
     },
     {
-        'name': 'Spa Manicure',
-        'desc': 'With exfoliating and invigorating oils it leaves your hands feeling smooth, refreshed, and pampered.',
+        'name': 'Spa Services',
+        'desc': 'With exfoliating and invigorating oils it leaves your skin feeling smooth, refreshed, and pampered.',
         'rates': [
             {
-                'label': 'Spa Manicure',
+                'label': 'Spa Manicure w/ Hydrating Paraffin',
                 'price': '$30'
+            },
+            {
+                'label': 'Spa Pedicure w/ Hot Stones & Paraffin on Heels',
+                'price': '$40'
             },
             {
                 'label': 'Deep Conditioning w/ Heated Mitts',

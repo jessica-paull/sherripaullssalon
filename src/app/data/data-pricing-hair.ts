@@ -68,6 +68,28 @@ export const HairPricing: Pricing[] = [
         ]
     },
     {
+        'name': 'Hair Smoothing Treatments',
+        'desc': '',
+        'rates': [
+            {
+                'label': 'GK Color Seal Treatment',
+                'price': '$85'
+            },
+            {
+                'label': 'GK Soft Smooth Keratin Treatment',
+                'price': '$125'
+            },
+            {
+                'label': 'GK Full Smooth Keratin Treatment',
+                'price': '$220'
+            },
+            {
+                'label': 'Paul Mitchel Wild Awapuhi Ginger Treatment',
+                'price': '$45'
+            }
+        ]
+    },
+    {
         'name': 'Hair Texturing',
         'desc': '',
         'rates': [
