@@ -82,3 +82,26 @@
     }
   }
 }
+
+// new - banner for covid-19 notice
+.nav-top-banner-notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px;
+  background: #bb942e;
+  color: white;
+
+  .banner-notice-show-more {
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+    font-size: .9em;
+    padding-left: 5px;
+  }
+}
+.navbar > .container {
+  margin-top: 30px;
+}
